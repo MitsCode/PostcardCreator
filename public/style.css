@@ -1,0 +1,302 @@
+/* styles */
+
+/* size of margin, border and padding is included in size of element 
+   in internal CSS calculations */
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --curcolor: #c9cbb3;
+}
+
+body {
+  /* font stack */
+  font-family: Verbana, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  /* item spacing will be controlled by flex-grow */
+  
+  min-height: 100vh;
+  /* the height of the body is at least the height of the viewport */
+  /* needed to make sticky footer work */
+}
+
+@media (max-width: 900px) {
+  #postcardarea {
+    text-align: center;
+    justify-content: space-around;
+  }
+  
+  .line {
+    width: 440px;
+    float: center;
+    border-top: 3px solid black;
+    height: 5px;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  .line{
+    border-left: 3px solid black;
+    height: 440px;
+  }
+}
+
+header {
+  flex-grow: 0;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  margin: 30px;
+}
+
+#postcardarea {
+  background-color: var(--curcolor);
+  min-height: 500px;
+  max-width: 850px;
+  min-width: 250px;
+  border-radius: 25px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#overlay{
+  position: center;
+  display: none;
+  width: 50%;
+  height: 75%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 2;
+  cursor: pointer;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    display: none;
+}
+
+
+.leftpost{
+ 
+  float: left;
+}
+
+.rightpost{
+  
+  float: right;
+}
+
+.line{
+  margin-top: 30px;
+  float: left;
+}
+
+#rightwords{
+  margin-right: 90px;
+  margin-left: 50px;
+  margin-top: 80px;
+  font-size: 100px;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+#choose{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 3px dotted black;
+  text-align: center;
+  display: block;
+  
+}
+
+.bottom{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.font{
+  padding-right: 50px;
+}
+
+#font1{
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 25px;
+  padding-top: 10px;
+}
+#font2{
+  font-family: 'Dancing Script';
+  font-size: 25px;
+  padding-top: 5px;
+}
+#font3{
+  font-family: 'Long Cang';
+  font-size: 25px;
+  padding-top: 5px;
+}
+#font4{
+  font-family: 'Homemade Apple';
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.color{
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row1{
+  display: flex;
+  margin-top: 10px;
+}
+.row2{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#color1{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #e6e2cf;
+  
+}
+#color2{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #dbcaac;
+}
+#color3{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #c9cbb3;
+}
+#color4{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #bbc9ca;
+}
+#color5{
+  height: 50px;
+  width: 50px;
+  background-color: #a6a5b5;
+}
+#color6{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #b5a6ab;
+}
+#color7{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #eccfcf;
+}
+#color8{
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  background-color: #eceeeb;
+}
+#color9{
+  height: 50px;
+  width: 50px;
+  background-color: #bab9b5;
+}
+
+#share{
+  margin: auto;
+  font-size: 22px;
+  border: 2px solid black;
+  padding: 10px;
+  font-weight: bold;
+ 
+}
+
+main {
+
+  width: 80%;
+  margin: auto;
+
+  /* flex item commands */
+  flex-grow: 1;  /* take one share of any extra space */
+  
+  /* flex container commands */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.imageWrapper {
+  width: 90%;
+  max-width: 300px;
+  max-length: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  min-width: 300px;
+}
+
+img#serverImage {
+  width: 100%;
+}
+
+div#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+input#fileChooser {
+  display: none;
+}
+
+label {
+  color: blue;
+}
+
+footer {
+  /*
+  position: absolute;
+  bottom: 0;
+  */
+  /* flex item commands */
+  flex-grow: 0;  /* I don't take up any extra space */
+  
+  /* flex container commands */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.glitchButton {
+  margin: .5em;
+}
+
