@@ -1,0 +1,117 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show me!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+
+    <header>
+      <h1>
+         Daily Postcard Creator
+      </h1>
+    </header>
+    
+    <main>
+      
+      <div id = "overlay" onclick = "LinkOver()"><div id = "close"></div></div>
+
+      <div id = "postcardarea">
+        
+        <div class = "leftpost">
+          
+          <div class="imageWrapper">
+            <img id="serverImage"/>
+          </div>
+          
+          <div id = "choose" onclick ="document.getElementById('choose').style.display = 'none'; ReplaceImage()">
+            <label for="fileChooser">Choose an image (PNG, JPG, GIF)</label>
+            <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif"> 
+          </div>
+        
+        </div> 
+        
+        <div class = "rightpost">
+          
+          <div class = "line"></div>
+          
+          <div id = "rightwords" contenteditable = "true">
+            <p id = "words" style="font-size:30px"> Message Here. </p> 
+          </div>    
+          
+        </div>
+      </div>
+      
+      <div class = "bottom">
+        
+        <div class = "font">
+          <font size = "6px">Choose your font</font>
+          <div class = "fontlist">
+            <div id = "font1" onclick = "Indie()"><li>Indie Flower</li></div>
+            <div id = "font2" onclick = "Dance()"><li>Dancing Script</li></div>
+            <div id = "font3" onclick = "Long()"><li>Long Cang</li></div>
+            <div id = "font4" onclick = "Homemade()"><li>Homemade Apple</li></div>
+          </div>
+        </div>
+        
+        <div class = "color">
+          <font size = "6px">Choose your font</font>
+          
+          <div class = "row1">
+            
+            <div id ="color1" onclick = "Color1()" onmouseover="mouseOver1()" onmouseout="mouseOut()"></div>
+            <div id ="color2" onclick = "Color2()" onmouseover="mouseOver2()" onmouseout="mouseOut()"></div>
+            <div id ="color3" onclick = "Color3()" onmouseover="mouseOver3()" onmouseout="mouseOut()"></div>
+            <div id ="color4" onclick = "Color4()" onmouseover="mouseOver4()" onmouseout="mouseOut()"></div>
+            <div id ="color5" onclick = "Color5()" onmouseover="mouseOver5()" onmouseout="mouseOut()"></div>
+            
+          </div>
+          
+          <div class = "row2">
+          
+            <div id ="color6" onclick = "Color6()" onmouseover="mouseOver6()" onmouseout="mouseOut()"></div>
+            <div id ="color7" onclick = "Color7()" onmouseover="mouseOver7()" onmouseout="mouseOut()"></div>
+            <div id ="color8" onclick = "Color8()" onmouseover="mouseOver8()" onmouseout="mouseOut()"></div>
+            <div id ="color9" onclick = "Color9()" onmouseover="mouseOver9()" onmouseout="mouseOut()"></div>
+            
+          </div>
+        </div>
+        
+        <div id = "share">
+          Share Postcard
+        </div>
+        
+      </div>
+
+    <div id="controls">
+      
+      <!-- ***********************
+      To make the app work, delete the paragraph above and un-comment the lines below 
+      ************************** -->
+    </div>
+
+    </main>
+    
+ 
+    <footer>
+      <p class="msg">
+         Made on Glitch!
+      </p>
+       <!-- adds the glitch button at the bottom -->
+    <div class="glitchButton"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+    <script src="./script.js"></script>
+    </footer>
+  
+  </body>
+</html>
